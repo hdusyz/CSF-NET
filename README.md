@@ -87,3 +87,16 @@ We compared our results with other state-of-the-art methods, and our results wer
   </tr>  
 </tbody>
 </table>
+
+## Pre-requisties
+* Linux
+
+* Python>=3.7
+
+* NVIDIA GPU + CUDA12.1 cuDNN8.9
+
+## Getting started to evaluate
+
+```
+pip install -r requirements.txt
+```
