@@ -9,10 +9,10 @@
 This code is a pytorch implementation of our paper "CSF-net: Cross-Modal Spatiotemporal Fusion Network for Pulmonary Nodule Malignancy Predicting".
 It consists of three components: (a) spatial feature extraction module, (b) temporal residual fusion module, and (c) CMAF module.The spatial module combines ResNet with the CBAM for enhanced feature representation. The temporal residual fusion module integrates features from different time points to capture correlations. The CMAF module uses cross-modal attention to effectively integrate follow-up and clinical data.The figure below shows our proposed network.
 
-![image](model.png)
+![image](image/model.png)
 
 ## The Temporal Residual Fusion module in our method
-![image](tepfusion.png)
+![image](image/tepfusion.png)
 
 ## Experiment result
 We compared our results with other state-of-the-art methods, and our results were better than any other comparison method. The results indicate that the introduced CMAF module can effectively capture the intrinsic correlation between the two modalities. The time residual module we designed has good sensitivity to features at different times, and these two modules significantly improve the performance of the model.
@@ -96,7 +96,9 @@ We compared our results with other state-of-the-art methods, and our results wer
 * NVIDIA GPU + CUDA12.1 cuDNN8.9
 
 ## Getting started to evaluate
-
+### Install dependencies
 ```
 pip install -r requirements.txt
 ```
+### Data preprocess
+For CT images, we used https://github.com/lfz/DSB2017 The preprocessing method of this code, and then create ROI files based on the nodule coordinates given by the doctor; For clinical information, we use word embeddings and then perform dimensionality reduction to adapt to the model input
