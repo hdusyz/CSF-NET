@@ -101,4 +101,14 @@ We compared our results with other state-of-the-art methods, and our results wer
 pip install -r requirements.txt
 ```
 ### Data preprocess
-For CT images, we used https://github.com/lfz/DSB2017 The preprocessing method of this code, and then create ROI files based on the nodule coordinates given by the doctor; For clinical information, we use word embeddings and then perform dimensionality reduction to adapt to the model input
+For the CT images, we utilized the preprocessing method from the code available at https://github.com/lfz/DSB2017, and created ROI files based on the nodule coordinates provided by doctors. For the clinical information, we applied word embeddings and performed dimensionality reduction to fit the model's input.
+
+### Evaluation
+To do the evaluation process, please run the following command :
+```
+python main.py
+```
+
+### Data
+We used the National Lung Screening Trial (NLST) dataset, with the original data available for download at https://cdas.cancer.gov/learn/nlst/images/. From this dataset, we selected 443 cases based on pathological gold standards, which we named NLST-cmst.
+
